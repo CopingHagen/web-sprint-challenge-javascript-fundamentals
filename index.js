@@ -31,10 +31,11 @@ function myFunction() {
 */
 
 function summation(number) {
-  /*Your Code Here*/
-
+  let startingNumber = 0
+  for (let i = 0; i < i.length; i++);
+    return number;
   }
- console.log(`Task 2:`, summation(4));
+ console.log(`Topic 1.2:`, summation(4));
 
 // 🦁🦁🦁 Topic 2: ADVANCED Array Methods 🦁🦁🦁
 // Given this zoo data from around the United States, follow the instructions below. Use the specific array methods in the requests below to solve the problems.
@@ -75,10 +76,12 @@ const zooAnimals = [
   💡 NOTE: Do some research for other methods that can help help you
   */
 
-  function lowerCaseNames(/*Your Code Here*/){
-    /*Your Code Here*/
-  }
-  
+  function lowerCaseNames(array){
+    array.map((state) => {
+      return {'animal_name': state.animal_name};
+    });
+  }  
+  console.log('Topic 2.2:', lowerCaseNames(zooAnimals));
   
   /* 🦁🦁🦁 Request 3: .filter() 🦁🦁🦁
   The zoo is concerned about animals with a lower population count. 
