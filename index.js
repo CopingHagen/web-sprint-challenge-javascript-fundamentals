@@ -80,12 +80,12 @@ const zooAnimals = [
   */
 
   function lowerCaseNames(array){
-    let newArray = [];
+    let newLowerCaseArray = [];
     array.map(function(element) {
-      newArray.push(element.animal_name.toLowerCase());
+      newLowerCaseArray.push(element.animal_name.toLowerCase());
     });
     
-    return newArray;
+    return newLowerCaseArray;
   }  
   console.log('Topic 2.2:', lowerCaseNames(zooAnimals));
   
@@ -97,10 +97,11 @@ const zooAnimals = [
   3. Return this new array
   */
 
-  function lowPopulationAnimals(/*Your Code Here*/){
-    /*Your Code Here*/
+  function lowPopulationAnimals(array){
+    const newArrayOfPop = array.filter(state => state.population < 5);
+    return newArrayOfPop;
   }
-  
+  console.log('Topic 2.3:', lowPopulationAnimals(zooAnimals));
 
   /* 🦁🦁🦁 Request 4: .reduce() 🦁🦁🦁
   The zoo needs to know their total animal population across the United States. 
