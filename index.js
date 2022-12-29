@@ -130,11 +130,9 @@ const zooAnimals = [
     💡 NOTE: The tests for 'consume' will pass if it is created correctly and also after you correctly complete the functions 'add' and 'greeting' below in Step 2.
   */
 
-  function consume(a, b, cb()){
-    console.log(a,b,cb);
+  function consume(a, b, cb){
     return cb(a,b);   
-  };
-  //console.log(`Topic 2.5.1:`,consume(5, 6, consume));
+  }
   
   // 🦁🦁🦁 Step 2: Create several functions to callback with consume(); 🦁🦁🦁
 
@@ -146,7 +144,7 @@ const zooAnimals = [
 function add(a, b){
   return (a + b);
   }
-  console.log(`Topic 2.5.2:`, consume(5, 6, add));
+  console.log(`Topic 2.5.2:`, consume(5, 6, (add)));
 
 /* Use multiply to do the following:
 1. Receive two numbers as an argument that are passed in from its first and second parameters
@@ -156,7 +154,7 @@ function add(a, b){
 function multiply(a, b){
   return (a * b);
   }
-  console.log(`Topic 2.5.3:`, consume(5, 6, multiply));
+  console.log(`Topic 2.5.3:`, consume(5, 6, (multiply)));
 
  /* Use greeting to do the following:
 1. Receive two strings (a first name and last name) as an argument that are passed in from its first and second parameters
@@ -167,7 +165,7 @@ function multiply(a, b){
 function greeting(a, b){
   return `Hello ${a} ${b}, nice to meet you!`;
   }
-  console.log(`Topic 2.5.4:`, consume("John", "Doe", greeting));
+  console.log(`Topic 2.5.4:`, consume("John", "Doe", (greeting)));
   
 // 🦁🦁🦁 Step 3: Check your work by un-commenting the following calls to consume(): 🦁🦁🦁 
 // ⬇️ ⬇️ ⬇️ ⬇️ ⬇️ ⬇️ ⬇️ ⬇️ ⬇️ ⬇️ ⬇️
