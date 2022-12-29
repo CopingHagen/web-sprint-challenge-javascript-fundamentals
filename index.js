@@ -17,7 +17,8 @@ function myFunction() {
 
 //🚀🚀🚀 ⬇️ 📝 Explanation ⬇️ 📝 🚀🚀🚀: 
 
-
+`When nestedFunction is declared, a functional scope is created which allows that function to reach
+outward(upward) for context`
 
 
 
