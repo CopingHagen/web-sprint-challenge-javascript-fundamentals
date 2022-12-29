@@ -113,10 +113,11 @@ const zooAnimals = [
   */
 
   function USApop(array){
-    const initialValue = 0
-    array.reduce((accumulator, currentValue) => accumulator + currentValue.population, initialValue);
+    let sum = array.reduce((acc, currentValue) => {
+      return acc + currentValue.population;
+    }, 0);
+    return sum
   }
-  
   console.log('Topic 2.4', USApop(zooAnimals));
   // 🦁🦁🦁 Callbacks 🦁🦁🦁  
   /* 🦁🦁🦁 Step 1: Create a higher-order function 🦁🦁🦁
@@ -127,10 +128,12 @@ const zooAnimals = [
     💡 NOTE: The tests for 'consume' will pass if it is created correctly and also after you correctly complete the functions 'add' and 'greeting' below in Step 2.
   */
 
-  function consume(/*Your Code Here */){
-    /*Your Code Here */
+  function consume(a, b, cb){
+    cb = a + b;
+    return cb;
+    
   }
- 
+  console.log(consume(5, 6, consume));
   
   // 🦁🦁🦁 Step 2: Create several functions to callback with consume(); 🦁🦁🦁
 
@@ -139,20 +142,22 @@ const zooAnimals = [
  2. Return the sum of those numbers
  */
 
-function add(/*Your Code Here */){
-    /*Your Code Here*/
+function add(a, b, cb){
+    cb = a + b;
+    return cb;
   }
-
+  console.log(add(5, 6, add));
 
 /* Use multiply to do the following:
 1. Receive two numbers as an argument that are passed in from its first and second parameters
 2. Return the product of those numbers
 */
 
-function multiply(/*Your Code Here */){
-   /*Your Code Here */
+function multiply(a, b, cb){
+  cb = a * b;
+  return cb;
   }
-
+  console.log(multiply(5, 6, multiply));
 
  /* Use greeting to do the following:
 1. Receive two strings (a first name and last name) as an argument that are passed in from its first and second parameters
@@ -160,10 +165,10 @@ function multiply(/*Your Code Here */){
 💡 NOTE: The string returned must match the format above or the test will not pass!
 */
 
-function greeting(/*Your Code Here */){
-   return /*Your Code Here */
+function greeting(firstName, lastName){
+   return `Hello ${firstName} ${lastName}, nice to meet you!`;
   }
-  
+  console.log(greeting("Jane", "Doe"))
   
 // 🦁🦁🦁 Step 3: Check your work by un-commenting the following calls to consume(): 🦁🦁🦁 
 // ⬇️ ⬇️ ⬇️ ⬇️ ⬇️ ⬇️ ⬇️ ⬇️ ⬇️ ⬇️ ⬇️
