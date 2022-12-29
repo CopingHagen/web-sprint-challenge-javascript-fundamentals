@@ -31,11 +31,13 @@ function myFunction() {
 */
 
 function summation(number) {
-  let startingNumber = 0
-  for (let i = 0; i < i.length; i++);
-    return number;
+  let sum = 0;
+  for (let i = 1; i <= number; i++) {
+    sum += i;
   }
- console.log(`Topic 1.2:`, summation(4));
+  return sum;
+}
+console.log(summation(4));
 
 // 🦁🦁🦁 Topic 2: ADVANCED Array Methods 🦁🦁🦁
 // Given this zoo data from around the United States, follow the instructions below. Use the specific array methods in the requests below to solve the problems.
@@ -128,12 +130,11 @@ const zooAnimals = [
     💡 NOTE: The tests for 'consume' will pass if it is created correctly and also after you correctly complete the functions 'add' and 'greeting' below in Step 2.
   */
 
-  function consume(a, b, cb){
-    cb = a + b;
-    return cb;
-    
-  }
-  console.log(consume(5, 6, consume));
+  function consume(a, b, cb()){
+    console.log(a,b,cb);
+    return cb(a,b);   
+  };
+  //console.log(`Topic 2.5.1:`,consume(5, 6, consume));
   
   // 🦁🦁🦁 Step 2: Create several functions to callback with consume(); 🦁🦁🦁
 
@@ -142,22 +143,20 @@ const zooAnimals = [
  2. Return the sum of those numbers
  */
 
-function add(a, b, cb){
-    cb = a + b;
-    return cb;
+function add(a, b){
+  return (a + b);
   }
-  console.log(add(5, 6, add));
+  console.log(`Topic 2.5.2:`, consume(5, 6, add));
 
 /* Use multiply to do the following:
 1. Receive two numbers as an argument that are passed in from its first and second parameters
 2. Return the product of those numbers
 */
 
-function multiply(a, b, cb){
-  cb = a * b;
-  return cb;
+function multiply(a, b){
+  return (a * b);
   }
-  console.log(multiply(5, 6, multiply));
+  console.log(`Topic 2.5.3:`, consume(5, 6, multiply));
 
  /* Use greeting to do the following:
 1. Receive two strings (a first name and last name) as an argument that are passed in from its first and second parameters
@@ -165,10 +164,10 @@ function multiply(a, b, cb){
 💡 NOTE: The string returned must match the format above or the test will not pass!
 */
 
-function greeting(firstName, lastName){
-   return `Hello ${firstName} ${lastName}, nice to meet you!`;
+function greeting(a, b){
+  return `Hello ${a} ${b}, nice to meet you!`;
   }
-  console.log(greeting("Jane", "Doe"))
+  console.log(`Topic 2.5.4:`, consume("John", "Doe", greeting));
   
 // 🦁🦁🦁 Step 3: Check your work by un-commenting the following calls to consume(): 🦁🦁🦁 
 // ⬇️ ⬇️ ⬇️ ⬇️ ⬇️ ⬇️ ⬇️ ⬇️ ⬇️ ⬇️ ⬇️
